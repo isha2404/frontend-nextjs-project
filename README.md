@@ -5,6 +5,8 @@ This is the Valtech Front challenge
 ## Getting Started
 
 1 - fork the repository so you can work with it
+https://github.com/isha2404/frontend-nextjs-project.git
+cd frontend-nextjs-project
 
 2 - install all the dependencies `npm install`
 
