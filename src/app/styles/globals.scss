@@ -1,0 +1,56 @@
+@import "./variables.scss";
+
+html {
+  font-size: 16px;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; // Apply the box-sizing setting to all elements
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: $color-black;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: $color-red;
+  padding: 1.25rem 5rem;
+  height: 5rem;
+  align-items: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+footer {
+  background-color: $color-black;
+  color: white;
+  padding: 2.5rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 1rem;
+
+    h1 {
+      font-size: 1.25rem;
+    }
+  }
+
+  footer {
+    padding: 2rem; // Reduce padding in footer for smaller screens
+  }
+}

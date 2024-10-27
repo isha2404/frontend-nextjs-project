@@ -1,0 +1,88 @@
+@import "../../styles/variables.scss";
+
+.banner {
+  position: relative;
+  max-height: 35rem;
+  margin: 5rem;
+
+  // Banner Image as background
+  .bannerImage {
+    position: absolute;
+    background-color: $color-light-gray;
+    z-index: 1; // To ensure its behind the content
+    height: calc(100% - 5rem);
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    width: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+  }
+
+  // Banner Content (Valtech Image + Text)
+  .bannerContent {
+    position: relative;
+    z-index: 2; // To ensure bannerContent is above the banner image
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+
+    // Foreground Valtech Image
+    .valtechImage {
+      margin-right: 1rem;
+      padding-left: 7.6rem;
+    }
+
+    // Valtech Text
+    .valtechText {
+      align-self: center;
+      text-align: right;
+      margin-right: 2rem;
+      max-width: 30rem;
+
+      h1 {
+        font-size: 2.25rem;
+        font-weight: bold;
+        color: $color-black;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        color: $color-red;
+      }
+
+      p {
+        font-size: 1rem;
+        color: $color-black;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    margin: 4rem;
+    .bannerContent {
+      .valtechImage {
+        padding-left: 4rem;
+        width: calc(100% - 30vh);
+        height: calc(100% - 40vh);
+      }
+
+      .valtechText {
+        line-height: 0.5rem;
+        h1 {
+          font-size: 1.25rem;
+        }
+
+        h2 {
+          font-size: 1rem;
+        }
+
+        p {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}

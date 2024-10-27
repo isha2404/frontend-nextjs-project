@@ -1,0 +1,28 @@
+@import "../../styles/variables.scss";
+
+.officeDetailPage {
+  margin: 5rem;
+
+  .backButton {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: $color-black;
+    cursor: pointer;
+    text-decoration: auto;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .highlightedParagraph {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .paragraph {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,15 @@
+@import "../../styles/variables.scss";
+
+.description {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: $color-black;
+  padding: 1rem 5rem 1rem 5rem;
+
+  &.highlight {
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding: 0;
+  }
+}
