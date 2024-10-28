@@ -1,9 +1,10 @@
-import Description from "@/app/components/Description";
+import React from "react";
+import Description from "../../../components/Description";
 import articleData from "../../../../data/article.json"; // Mock data
-import styles from "../details.module.scss";
+import styles from "../office.module.scss";
 import Link from "next/link";
-import HeroArticle from "@/app/components/HeroArticle";
-import MuiCarousel from "@/app/components/MuiCarousel";
+import HeroArticle from "../../../components/HeroArticle";
+import MuiCarousel from "../../../components/MuiCarousel";
 
 const DetailsPage: React.FC = () => {
   const { content } = articleData;

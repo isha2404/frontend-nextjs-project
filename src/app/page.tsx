@@ -1,3 +1,4 @@
+import React from "react";
 import Banner from "./components/Banner";
 import CardGrid from "./components/CardGrid";
 import data from "../data/index.json"; // Mock data
