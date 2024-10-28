@@ -2,15 +2,22 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import HomePage from "./page";
 
+// Mock the CardGrid component
 jest.mock("./components/CardGrid", () => {
-  return (props: { children?: React.ReactNode }) => (
+  const MockCardGrid = (props: { children?: React.ReactNode }) => (
     <div data-testid="card-grid">{props.children}</div>
   );
+  MockCardGrid.displayName = "MockCardGrid";
+  return MockCardGrid;
 });
+
+// Mock the Banner component
 jest.mock("./components/Banner", () => {
-  return (props: { children?: React.ReactNode }) => (
+  const MockBanner = (props: { children?: React.ReactNode }) => (
     <div data-testid="banner">{props.children}</div>
   );
+  MockBanner.displayName = "MockBanner";
+  return MockBanner;
 });
 
 // Mock data
