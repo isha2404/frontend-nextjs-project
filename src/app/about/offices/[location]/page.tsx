@@ -20,12 +20,12 @@ const DetailsPage: React.FC = () => {
             return (
               <HeroArticle
                 key={index}
-                title={section.title}
-                subtitle={section.subtitle}
-                author={section.author}
-                publishingDate={section.publishingDate}
-                backgroundAsset={section.backgroundAsset}
-                sideAsset={section.sideAsset}
+                title={section?.title}
+                subtitle={section?.subtitle}
+                author={section?.author}
+                publishingDate={section?.publishingDate}
+                backgroundAsset={section?.backgroundAsset}
+                sideAsset={section?.sideAsset}
               />
             );
           case "PARAGRAPH":
