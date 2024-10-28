@@ -41,3 +41,9 @@ Data is under: `../src/data`
 ## Live Demo
 
 The project is deployed on Vercel. You can view it here: [Live Demo](https://frontend-nextjs-project-aditi-ezt08xfnb.vercel.app/)
+
+## Future Scope
+
+This project is currently implemented using the mock data provided by Valtech, which can be found in [the Valtech GitHub Repository](https://github.com/valtech-fr).
+
+To enhance the app and make it more appealing, real images of the company, office locations, and other relevant content can be integrated using real-time data. This will provide users with a more authentic experience and allow for dynamic updates to the displayed information.
