@@ -19,7 +19,7 @@ npm run dev
 
 ```bash
 npx jest
-
+```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -28,4 +28,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 [Project Figma](https://www.figma.com/design/VSzml7sK3UraIJpYwGg9eQ/Valtech-Tech-Challenge?node-id=0-1&t=IpHy7qL3ajJmN2W3-1)
 
 Your data is under: `../src/data`
+
+```
+
 ```
