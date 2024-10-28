@@ -6,8 +6,8 @@ interface HeroArticleProps {
   subtitle?: string;
   author?: string;
   publishingDate?: string;
-  backgroundAsset: { url: string; alt: string };
-  sideAsset: { url: string; alt: string };
+  backgroundAsset?: { url: string; alt: string };
+  sideAsset?: { url: string; alt: string };
 }
 
 const HeroArticle: React.FC<HeroArticleProps> = ({
@@ -21,16 +21,20 @@ const HeroArticle: React.FC<HeroArticleProps> = ({
   return (
     <div className={styles.heroArticle}>
       <div className={styles.imagesWrapper}>
-        <img
-          src={sideAsset.url}
-          alt={sideAsset.alt}
-          className={styles.sideImage}
-        />
-        <img
-          src={backgroundAsset.url}
-          alt={backgroundAsset.alt}
-          className={styles.backgroundImage}
-        />
+        {sideAsset && (
+          <img
+            src={sideAsset.url}
+            alt={sideAsset.alt}
+            className={styles.sideImage}
+          />
+        )}
+        {backgroundAsset && (
+          <img
+            src={backgroundAsset.url}
+            alt={backgroundAsset.alt}
+            className={styles.backgroundImage}
+          />
+        )}
         <div className={styles.textOverlay}>
           <h2>{subtitle}</h2>
           <h1>{title}</h1>

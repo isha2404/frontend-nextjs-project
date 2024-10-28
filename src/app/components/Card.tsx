@@ -6,7 +6,7 @@ type CardProps = {
   title: string;
   subtitle: string;
   description?: string;
-  backgroundAsset: { url: string; alt: string };
+  backgroundAsset?: { url: string; alt: string };
   cta?: { url: string; text: string; ariaLabel: string };
 };
 
@@ -32,12 +32,14 @@ const Card: React.FC<CardProps> = ({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <img
-        src={backgroundAsset.url}
-        alt={backgroundAsset.alt}
-        className={styles.cardImage}
-        aria-hidden="true"
-      />
+      {backgroundAsset && (
+        <img
+          src={backgroundAsset.url}
+          alt={backgroundAsset.alt}
+          className={styles.cardImage}
+          aria-hidden="true"
+        />
+      )}
 
       {/* Dynamically apply class based on hover state and content presence */}
       <div
