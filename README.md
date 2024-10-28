@@ -15,6 +15,12 @@ https://github.com/isha2404/frontend-nextjs-project.git
 npm run dev
 ```
 
+3 - run the test cases
+
+```bash
+npx jest
+
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Useful resources
@@ -22,3 +28,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 [Project Figma](https://www.figma.com/design/VSzml7sK3UraIJpYwGg9eQ/Valtech-Tech-Challenge?node-id=0-1&t=IpHy7qL3ajJmN2W3-1)
 
 Your data is under: `../src/data`
+```
