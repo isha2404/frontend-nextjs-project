@@ -4,15 +4,32 @@ import { render, screen } from "@testing-library/react";
 import DetailsPage from "./page";
 
 // Mock components
-jest.mock("../../../components/HeroArticle", () => (props: any) => (
-  <div data-testid="hero-article">{props.title}</div>
-));
-jest.mock("../../../components/Description", () => (props: any) => (
-  <div data-testid="description">{props.text}</div>
-));
-jest.mock("../../../components/MuiCarousel", () => (props: any) => (
-  <div data-testid="carousel">{`Carousel with ${props.items.length} items`}</div>
-));
+jest.mock("../../../components/HeroArticle", () => {
+  const MockHeroArticle = (props: any) => (
+    <div data-testid="hero-article">{props.title}</div>
+  );
+  MockHeroArticle.displayName = "MockHeroArticle";
+  return MockHeroArticle;
+});
+jest.mock("../../../components/Description", () => {
+  const MockDescription = (props: any) => (
+    <div
+      data-testid="description"
+      className={props.highlight ? "highlight" : ""}
+    >
+      {props.text}
+    </div>
+  );
+  MockDescription.displayName = "MockDescription";
+  return MockDescription;
+});
+jest.mock("../../../components/MuiCarousel", () => {
+  const MockMuiCarousel = (props: any) => (
+    <div data-testid="carousel">{props.items?.length} items</div>
+  );
+  MockMuiCarousel.displayName = "MockMuiCarousel";
+  return MockMuiCarousel;
+});
 
 describe("DetailsPage", () => {
   test("renders HeroArticle component when content type is HERO_ARTICLE", () => {
